@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
-      - run: npm install -g eas-cli
+          node-version: 20
+      - run: npm install -g eas-cli@latest
       - run: npm install --legacy-peer-deps
       - run: eas build --profile preview --platform android --non-interactive
         env:
