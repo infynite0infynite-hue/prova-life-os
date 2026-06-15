@@ -11,8 +11,8 @@ jobs:
         with:
           node-version: 20
       - run: npm install -g eas-cli@latest
-      - run: npm install --legacy-peer-deps --force
-      - run: npx expo install --fix
+      - run: npm install expo expo-router react-native --legacy-peer-deps
+      - run: npm install --legacy-peer-deps
       - run: eas build --profile preview --platform android --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
